@@ -8,7 +8,7 @@ This library was written out of the need to obfuscate the source for a private l
 
 While this tool does not make PHP code impossible to read, it will make it significantly less legible.
 
-It is compatible with PHP 5.3, 5.4 and 5.5, but needs PHP 5.4+ to run.
+This library is currently under development and supports PHP 7.2 and above. PHP 8 has not been tested yet. For PHP 5.x please use [this](https://github.com/naneau/php-obfuscator). 
 
 ## Usage
 
