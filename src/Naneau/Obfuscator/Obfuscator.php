@@ -84,8 +84,8 @@ class Obfuscator
     {
         foreach ($this->getFiles($directory) as $file) {
             $this->getEventDispatcher()->dispatch(
-                'obfuscator.file',
-                new FileEvent($file)
+                new FileEvent($file),
+                'obfuscator.file'
             );
 
             // Write obfuscated source

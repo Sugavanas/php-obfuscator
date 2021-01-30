@@ -90,16 +90,20 @@ class ObfuscateCommand extends Command
                 'See http://php.net/manual/en/ini.core.php#ini.memory-limit'
             );
 
-        $this->setContainer(new Container);
+        $container = new Container();
+
+        $this->setContainer($container);
     }
 
     /**
      * Execute the command
      *
-     * @param  InputInterface  $input
-     * @param  OutputInterface $output
-     * @return void
-     **/
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     *
+     * @throws \Exception
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // Finalize the container
@@ -161,6 +165,8 @@ class ObfuscateCommand extends Command
         // Actual obfuscation
         $this->getObfuscator()->obfuscate($directory, $stripWhitespace,
             $ignoreError);
+
+        return Command::SUCCESS;
     }
 
     /**

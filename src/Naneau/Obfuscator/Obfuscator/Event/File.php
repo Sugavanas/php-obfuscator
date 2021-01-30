@@ -8,7 +8,7 @@
 
 namespace Naneau\Obfuscator\Obfuscator\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\EventDispatcher\GenericEvent;
 
 /**
  * File
@@ -19,7 +19,7 @@ use Symfony\Component\EventDispatcher\Event;
  * @package         Obfuscator
  * @subpackage      Obfuscator
  */
-class File extends Event
+class File extends GenericEvent
 {
     /**
      * The file

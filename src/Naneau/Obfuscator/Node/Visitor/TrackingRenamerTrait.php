@@ -24,19 +24,18 @@ trait TrackingRenamerTrait
      *
      * @var string[]
      **/
-    private $renamed = array();
+    private $renamed = [];
 
     /**
      * Record renaming of method
      *
-     * @param  string    $method
-     * @param  string    $newName
-     * @return SkipTrait
-     **/
+     * @param string $method
+     * @param string $newName
+     * @return TrackingRenamerTrait
+     */
     protected function renamed($method, $newName)
     {
         $this->renamed[$method] = $newName;
-
         return $this;
     }
 

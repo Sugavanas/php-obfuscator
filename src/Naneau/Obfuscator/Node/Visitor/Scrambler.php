@@ -61,7 +61,7 @@ abstract class Scrambler extends NodeVisitorAbstract
     protected function scramble(Node $node, $var = 'name')
     {
         // String/value to scramble
-        $toScramble = $node->$var;
+        $toScramble = $node->$var ?? $node->var;
 
         // We ignore to scramble if it's not string (ex: a variable variable name)
         if (!is_string($toScramble)) {
